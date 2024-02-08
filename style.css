@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Rubik+Gemstones&display=swap');
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color:#2a2424;
+    --secondary-text-color:#594f4f;
+    --accent-color:#2294ed;
+    --padding-inline-section:20px;
+    --primary-text-color-dark:#1d69a3;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+   background-color: rgb(254, 250, 244);
+    /* color: white; */
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: 'Roboto' ,sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+  color: white;   /* me */
+}
+
+ul{
+    list-style: none;
+}
+
+/* utility class */
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;  /*   responsive */
+}
+
+.primary-button{
+    background-color:red;
+    border-radius: 6px;
+    color: white !important;
+    font-weight: 700;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.4s ease-in-out;
+    text-align: center;
+}
+
+.primary-button:hover{
+    background-color: #d54b41;
+}
+
+.secondary-button{
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color-dark);
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover{
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color);
+}
+
+/* nav bar */
+
+.nav{
+    background-image: linear-gradient(rgb(4,9,30, 0.7),rgb(4,9,30,0.7)), url(assets/eduford_img/banner.png);
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav-bar{
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.nav-links ul{
+    justify-content:flex-end;
+    gap: 20px;
+    color: aliceblue;
+}
+
+.hover-links{
+    transition: 0.3s ease-in-out;
+}
+
+.hover-links:hover{
+    color: #2294ed;
+    /* transition: 0.2s ease-out; */
+}
+
+.text-box{
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+    color: white;
+   position: absolute;
+   transform: translate(-50% , -50%);
+   text-align: center;
+   flex-wrap: wrap;
+}
+
+.text-box h1{
+    font-size:62px;
+}
+
+.text-box p{
+    color: rgb(255, 255, 255);
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+/* course section */
+
+.course-header{
+    text-align: center;
+    margin-top: 120px;
+}
+
+.course-card{
+   gap: 10px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.cards{
+    text-align: center;
+    background-color:antiquewhite;
+    padding-block: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.cards h2{
+margin-bottom: 20px;
+}
+
+.campus-header{
+    text-align: center;
+    margin-block: 100px;
+}
+
+/* campus-section */
+
+.campus-city{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    flex-basis: 32%;
+    
+
+}
+.city img{
+   width: 100%;
+   border-radius: 10px;
+   align-items: center;
+   position: relative;
+}
+
+.layer{
+    background-color: rgba(226, 0, 0, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.facilities-header{
+    text-align: center;
+    margin-block: 50px;
+}
+
+.facilities-header p{
+    margin-top: 10px;
+}
+
+.facilities-card{
+    flex-direction: row;
+    /* flex-wrap: wrap;  */
+    flex-basis: 32%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card1 img{
+    width: 100%;
+   margin-bottom: 20px;
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.card1 p{
+    margin-top: 10px;
+}
+
+/* testimonials section  */
+.testimonials-card{
+   justify-content: space-between;
+   gap: 20px;
+}
+.testimonials-header{
+    margin-block: 100px;
+    text-align: center;
+}
+
+.testimonials-header p{
+    margin-top: 20px;
+}
+
+.checked{
+    color: gold;
+}
+
+.card2 img{
+    border-radius: 50px;
+    width: 50px;
+    margin-right: 15px;
+    /* align-items: flex-start; */
+}
+
+.card2{
+    width: 50%;
+      padding: 20px;
+    align-items: flex-start;
+    background-color: antiquewhite;
+    padding-block: 40px;
+    border-radius: 10px;
+}
+
+.card-text{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* cta-section */
+
+.cta-header {
+    background-image: linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), url(./assets/eduford_img/banner2.jpg);
+    width: 100%;
+    height: 500px;
+   margin-top: 200px;
+   /* border-radius: 10px; */
+   text-align: center;
+   gap: 20px;
+}
+
+.cta-header h2{
+    /* text-align: center; */
+    padding-top: 200px;
+    color: aliceblue;
+   
+}
+
+.cta-btn{
+    /* align-items: center; */
+    color: whitesmoke;
+    /* text-align: center; */
+   
+    /* margin-block: 400px; */
+    border-color: antiquewhite;
+}
+
+/* about-us section */
+
+.about-header{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.about-header p{
+    margin-block: 30px;
+}
+
+.media-icons {
+   
+  margin-left: 44%;
+/* justify-content: center; */
+   gap: 20px;
+}
+
+/* about us page */
+
+.about-nav{
+    background-image: linear-gradient(rgb(4,9,30, 0.7),rgb(4,9,30,0.7)), url(assets/eduford_img/background.jpg);
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-text-box{
+    /* top: 50%; */
+    left: 50%;
+    width: 90%;
+    /* align-items: center; */
+    color: white;
+   position: absolute;
+   transform: translate(-50% , -50%);
+   text-align: center;
+   margin-top: 100px;
+}
+
+.about-container{
+    flex-direction: row;
+    margin-block: 50px;
+    gap: 50px;
+}
+
+.about-right img{
+    width: 500px;
+
+    /* height: 100%; */
+}
+
+.about-right{
+    width: 100%;
+    height: 50%;
+}
+
+.about-page-header{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.about-left{
+    align-items: flex-start;
+    flex-direction: column;
+   
+}
+
+
+
+/* footer section  */
+.sub-footer{
+    background-color: #2776dd;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.rules{
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+}
+
+/* .small-footer{
+    justify-content: space-between;
+} */
+
+/* contact page css */
+
+.location{
+    width: 80%;
+    padding: 80px 0px;
+    margin: auto;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div{
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.contact-col div .fa{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p{
+    padding: 0;
+}
+
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
